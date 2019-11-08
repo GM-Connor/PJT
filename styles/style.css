@@ -1,0 +1,161 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  font-size: .9em;
+}
+
+table {
+  max-width: 1500px;
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+table + table {
+  margin-top: 30px;
+}
+
+caption {
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+thead th {
+  font-weight: 400;
+  background: #8a97a0;
+  color: #FFF;
+}
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+  background: #e8eeef;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+  width: 14.2856%;
+  vertical-align: top;
+}
+
+th {
+  text-align: center;
+  padding: 15px;
+}
+
+th + th {
+  border-left: 1px solid #fff;
+}
+
+th.week {
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  background: #637079;
+}
+
+td + td {
+  border-left: 1px solid #eee;
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #8a97a0;
+}
+
+div.exercise {
+  position: relative;
+}
+
+.exercise > * {
+  z-index: 5;
+  position: relative;
+}
+
+.exercise > br:first-child {
+  display: none;
+}
+
+.exercise:last-of-type .limiter::before {
+  height: 111%;
+}
+
+.training-max {
+  float: right;
+  margin-top: -1em;
+  line-height: 1em;
+  font-size: 75%;
+  color: grey;
+}
+
+.limiter {
+  position: initial!important;
+}
+
+.limiter::before {
+  z-index: 1;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  border: 2px solid hsl(206, 50%, 31%);
+  margin-left: -3.5%;
+  margin-top: -3.5%;
+  width: 107%;
+  height: 120%;
+  background: hsl(198, 15%, 90%);
+}
+
+.limiter::after {
+  z-index: 2;
+  content: "Limited";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -6% 30% 0;
+  width: 40%;
+  height: auto;
+  padding: 0px 4px;
+  border-radius: 2px;
+  background: hsl(206, 50%, 31%);
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  opacity: 1;
+}
+
+
+@media print {
+  body {
+    font-size: 0.7em;
+  }
+  table:nth-of-type(even) {
+    page-break-after: always;
+    margin: 0;
+    max-width: 100%;
+  }
+  td,
+  th {
+    padding: 10px;
+  }
+}

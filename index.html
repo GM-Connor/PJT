@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script type="text/javascript" src="scripts/pjt.js"></script>
+	<script type="text/javascript" src="scripts/exercises.js"></script>
+	<style>table:nth-of-type(-n+6) tbody, table:nth-of-type(-n+6) thead tr:nth-child(2) {display: none;}</style>
+	<script type="text/javascript">
+
+		// Bodyweight (pounds)
+		BODY_WEIGHT = 133;
+
+		// Age modifier
+		// 14-17 (87%)
+		// 18-23 (98%)
+		// 24-39 (100%)
+		// 40-49 (95%)
+		// 50-59 (83%)
+		// 60-69 (69%)
+		// 70-79 (55%)
+		// 80-89 (44%)
+
+		AGE_MODIFIER = .98;
+
+		// Overrides (common settings)
+		STR_SQUAT.training_max =    186;
+		STR_BENCH.training_max =    140;
+		STR_DEADLIFT.training_max = 190;
+		STR_PRESS.training_max =     75;
+
+		STR_SHRUG.training_max =     128;
+		STR_BCURL.training_max =     63;
+		STR_TBAR.training_max =      115;
+		STR_TRIEXT.training_max =    52;
+		STR_RWCURL.training_max =    77;
+
+		CO2_O2.training_max =        85;
+
+		PULLUP_50.routine_fastforward =    5;
+		DIP_100.routine_fastforward =      0;
+		PUSHUP_100.routine_fastforward =   5;
+		SITUP_100.routine_fastforward =    0;
+
+		PULLUP_50.routine_offset =    2;
+		DIP_100.routine_offset =      14;
+		PUSHUP_100.routine_offset =   16;
+		SITUP_100.routine_offset =    14;
+
+		COUCH_TO_5K.routine_offset =    7;
+
+		COUCH_TO_5K.routine_fastforward =  8;
+		CO2_O2.routine_fastforward =       0;
+		// SWIM_TO_5K.routine_fastforward =   0;
+
+
+		// ===============
+		// Metric hookups
+		// ===============
+
+		// Use metric kg
+		USE_METRIC_KG = true;
+
+		// Max weight lb
+		MAX_WEIGHT = 209; // 95kg (max weights I have access to)
+
+		// Smallest plate (kg)
+		WEIGHT_SMALLEST_PLATE = 1.25;
+
+		// Bar weight (lb)
+		STR_SQUAT.warmup_min_load =    22;
+		STR_BENCH.warmup_min_load =    22;
+		STR_DEADLIFT.warmup_min_load = 22;
+		STR_PRESS.warmup_min_load =    22;
+
+		// STR_SHRUG.warmup_min_load =    22;
+		STR_BCURL.warmup_min_load =    22;
+		STR_TBAR.warmup_min_load =     42;
+		// STR_TRIEXT.warmup_min_load =   22;
+		STR_RWCURL.warmup_min_load =   22;
+
+
+
+
+		// Register exercises
+
+		pjt_register_exercise( STR_SQUAT );
+		pjt_register_exercise( STR_BENCH );
+		pjt_register_exercise( STR_DEADLIFT );
+		pjt_register_exercise( STR_PRESS );
+
+		// pjt_register_exercise( STR_SHRUG );
+		pjt_register_exercise( STR_BCURL );
+		// pjt_register_exercise( STR_TBAR );
+		// pjt_register_exercise( STR_TRIEXT );
+		pjt_register_exercise( STR_RWCURL );
+
+		pjt_register_exercise( PULLUP_50 );
+		pjt_register_exercise( PUSHUP_100 );
+		pjt_register_exercise( COUCH_TO_5K );
+		// pjt_register_exercise( CO2_O2 );
+		// pjt_register_exercise( SWIM_WARMUP );
+		// pjt_register_exercise( SWIM_TO_5K );
+
+		// pjt_register_exercise( DIP_100 );
+		// pjt_register_exercise( SITUP_100 );
+
+
+		// Build schedule
+		pjt_build_schedule();
+
+	</script>
+</head>
+<body>
+	<strong>PRP:</strong> <i>Pyramid Reverse Pyramid</i> Pyramiding up in reps by two until failure, them coming back down to starting position.
+	
+</body>
+</html>
